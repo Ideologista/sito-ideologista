@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideologic Facility - Terminal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="skip-prompt" id="skip-prompt">Premi [SPAZIO] per saltare...</div>
+    
+    <div id="terminal">
+        <div id="login-screen">
+            <pre>
+██╗███████╗███████╗ ██████╗ ██╗      ██████╗  ██████╗ ██╗ ██████╗ ██╗
+██║██╔════╝██╔════╝██╔═══██╗██║     ██╔═══██╗██╔════╝ ██║██╔════╝ ██║
+██║█████╗  █████╗  ██║   ██║██║     ██║   ██║██║  ███╗██║██║  ███╗██║
+██║██╔══╝  ██╔══╝  ██║   ██║██║     ██║   ██║██║   ██║██║██║   ██║╚═╝
+██║███████╗███████╗╚██████╔╝███████╗╚██████╔╝╚██████╔╝██║╚██████╔╝██╗
+╚═╝╚══════╝╚══════╝ ╚═════╝ ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝ ╚═════╝ ╚═╝
+            </pre>
+            <p>Accesso richiesto al server [IDEOLOGIC_FACILITY]...</p>
+            <p>Connessione stabilita.</p>
+            <br>
+            <div class="login-prompt">
+                <label for="username">Inserire Nome Utente:</label>
+                <span id="username-input"></span><span class="cursor" id="user-cursor">_</span>
+            </div>
+            <div class="login-prompt">
+                <label for="password">Inserire Password:</label>
+                <span id="password-input"></span><span class="cursor" id="pass-cursor" style="display: none;">_</span>
+            </div>
+        </div>
+
+        <div id="main-content" style="display: none;">
+            <div class="glitch" data-text="[ACCESSO AUTORIZZATO]">
+                [ACCESSO AUTORIZZATO]
+            </div>
+            <p>Caricamento protocolli di sicurezza...</p>
+            <p>Benvenuto, Utente_ideologo.</p>
+            <hr>
+            
+            <pre>
+# Mittente della comunicazione: Ideologic Facility
+### **Vi presentiamo il server ufficiale di Ideologista, un content creator in espansione presente soprattutto su Twitch e Tiktok. Minecraft, SCP, The Finals sono all'ordine del canale**
+
+**Protocollo seguito dalla struttura:**
+**
+> - 💖 ⋙Contenuti sani e sicuri
+> - 💬 ⋙Founder sempre attivo in chat
+> - 🎉 ⋙Contenuti nuovi sia Live che Discord
+> - 🦺 ⋙Bot personalizzati e staff amichevole
+> - 👾 ⋙ Server a tema SCP
+**
+</pre>
+            <hr>
+            <h1 class="glitch" data-text="Tutti i miei link!!!">Tutti i miei link!!!</h1>
+            
+            <div class="button-container">
+                <a href="tiktok.html" class="retro-button">[ TIKTOK ]</a>
+                <a href="twitch.html" class="retro-button">[ TWITCH ]</a>
+                <a href="discord.html" class="retro-button">[ DISCORD ]</a>
+                <a href="instagram.html" class="retro-button">[ INSTAGRAM ]</a>
+                <a href="youtube.html" class="retro-button">[ YOUTUBE ]</a>
+            </div>
+
+            <pre class="footer">
+`by Ideologista`
+            </pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
