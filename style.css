@@ -1,0 +1,156 @@
+/* Stile base terminale */
+body, html {
+    background-color: #0d0d0d;
+    color: #0f0;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#terminal {
+    padding: 20px;
+    border: 2px solid #0f0;
+    margin: 20px;
+    box-shadow: 0 0 15px #0f0, 0 0 10px #0f0 inset;
+    min-height: calc(100vh - 84px); /* Altezza schermo meno padding/margin */
+}
+
+pre {
+    font-family: 'VT323', monospace;
+    color: #0f0;
+    white-space: pre-wrap; /* Manda a capo il testo lungo */
+    font-size: 18px;
+}
+
+hr {
+    border: 1px dashed #0f0;
+    opacity: 0.6;
+}
+
+/* Animazione Login */
+.login-prompt {
+    margin-bottom: 15px;
+}
+.cursor {
+    animation: blink 1s step-end infinite;
+    display: inline-block;
+}
+@keyframes blink {
+    from, to { color: transparent; }
+    50% { color: #0f0; }
+}
+
+/* Prompt per saltare */
+.skip-prompt {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: #0f0;
+    opacity: 0.7;
+    font-size: 16px;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+/* Pulsanti Retrò */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+.retro-button {
+    background-color: #0d0d0d;
+    border: 2px solid #0f0;
+    color: #0f0;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 5px #0f0;
+}
+.retro-button:hover {
+    background-color: #0f0;
+    color: #0d0d0d;
+    box-shadow: 0 0 15px #0f0;
+}
+.retro-button.back {
+    margin-top: 20px;
+    display: inline-block; /* Per non occupare tutta la larghezza */
+}
+
+/* Effetto Glitch */
+.glitch {
+    position: relative;
+    animation: glitch-anim 2.5s infinite steps(10);
+}
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0d0d0d;
+}
+.glitch::before {
+    left: 2px;
+    text-shadow: -1px 0 #ff00c1; /* Magenta */
+    animation: glitch-anim-2 2s infinite linear alternate-reverse;
+}
+.glitch::after {
+    left: -2px;
+    text-shadow: -1px 0 #00fff9; /* Ciano */
+    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% { clip-path: inset(40% 0 30% 0); }
+    10% { clip-path: inset(10% 0 85% 0); }
+    20% { clip-path: inset(90% 0 1% 0); }
+    30% { clip-path: inset(30% 0 40% 0); }
+    40% { clip-path: inset(1% 0 90% 0); }
+    50% { clip-path: inset(60% 0 10% 0); }
+    60% { clip-path: inset(80% 0 5% 0); }
+    70% { clip-path: inset(10% 0 60% 0); }
+    80% { clip-path: inset(50% 0 20% 0); }
+    90% { clip-path: inset(20% 0 70% 0); }
+    100% { clip-path: inset(70% 0 5% 0); }
+}
+@keyframes glitch-anim-1 {
+    0% { clip-path: inset(30% 0 60% 0); }
+    100% { clip-path: inset(50% 0 20% 0); }
+}
+@keyframes glitch-anim-2 {
+    0% { clip-path: inset(80% 0 5% 0); }
+    100% { clip-path: inset(10% 0 70% 0); }
+}
+
+/* Stile per le pagine Social */
+.social-page {
+    padding: 20px;
+}
+.stats-box {
+    border: 1px solid #0f0;
+    padding: 15px;
+    margin-top: 20px;
+    min-height: 100px;
+}
+.stats-box h2 {
+    margin-top: 0;
+}
+.stats-box p {
+    font-size: 22px;
+}
+#loading-stats {
+    animation: pulse 1.5s infinite;
+}
