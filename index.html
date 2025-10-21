@@ -3,73 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ideologic Facility - Terminal</title>
+    <title>Ideologic Facility</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="skip-prompt" id="skip-prompt">Premi [SPAZIO] per saltare...</div>
-    
-    <div id="terminal">
-        <div id="login-screen">
-            <pre>
-██╗███████╗███████╗ ██████╗ ██╗      ██████╗  ██████╗ ██╗ ██████╗ ██╗
-██║██╔════╝██╔════╝██╔═══██╗██║     ██╔═══██╗██╔════╝ ██║██╔════╝ ██║
-██║█████╗  █████╗  ██║   ██║██║     ██║   ██║██║  ███╗██║██║  ███╗██║
-██║██╔══╝  ██╔══╝  ██║   ██║██║     ██║   ██║██║   ██║██║██║   ██║╚═╝
-██║███████╗███████╗╚██████╔╝███████╗╚██████╔╝╚██████╔╝██║╚██████╔╝██╗
-╚═╝╚══════╝╚══════╝ ╚═════╝ ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝ ╚═════╝ ╚═╝
-            </pre>
-            <p>Accesso richiesto al server [IDEOLOGIC_FACILITY]...</p>
-            <p>Connessione stabilita.</p>
-            <br>
-            <div class="login-prompt">
-                <label for="username">Inserire Nome Utente:</label>
-                <span id="username-input"></span><span class="cursor" id="user-cursor">_</span>
-            </div>
-            <div class="login-prompt">
-                <label for="password">Inserire Password:</label>
-                <span id="password-input"></span><span class="cursor" id="pass-cursor" style="display: none;">_</span>
-            </div>
-        </div>
+    <div class="static-overlay"></div>
 
-        <div id="main-content" style="display: none;">
-            <div class="glitch" data-text="[ACCESSO AUTORIZZATO]">
-                [ACCESSO AUTORIZZATO]
+    <div class="skip-prompt" id="skip-prompt">Premi [SPAZIO] per saltare...</div>
+
+    <main id="app-container">
+
+        <section class="page active" id="page-login">
+            <div class="page-content center-content">
+                
+                <h1 class="login-title">IDEOLOGIC FACILITY</h1>
+                <p>Accesso richiesto al server [SECURE_NODE]...</p>
+                
+                <div class="login-prompt">
+                    <label for="username">Utente:</label>
+                    <span id="username-input"></span><span class="cursor" id="user-cursor">_</span>
+                </div>
+                <div class="login-prompt">
+                    <label for="password">Password:</label>
+                    <span id="password-input"></span><span class="cursor" id="pass-cursor" style="display: none;">_</span>
+                </div>
             </div>
-            <p>Caricamento protocolli di sicurezza...</p>
-            <p>Benvenuto, Utente_ideologo.</p>
-            <hr>
-            
-            <pre>
+        </section>
+
+        <section class="page" id="page-home">
+            <div class="page-content">
+                <h1 class="glitch-text" data-text="[ACCESSO AUTORIZZATO]">[ACCESSO AUTORIZZATO]</h1>
+                <p>Benvenuto, Utente_ideologo.</p>
+                <hr>
+                <pre class="info-box">
 # Mittente della comunicazione: Ideologic Facility
-### **Vi presentiamo il server ufficiale di Ideologista, un content creator in espansione presente soprattutto su Twitch e Tiktok. Minecraft, SCP, The Finals sono all'ordine del canale**
+### Vi presentiamo il server ufficiale di Ideologista, un content creator in espansione presente soprattutto su Twitch e Tiktok. Minecraft, SCP, The Finals sono all'ordine del canale
 
 **Protocollo seguito dalla struttura:**
-**
 > - 💖 ⋙Contenuti sani e sicuri
 > - 💬 ⋙Founder sempre attivo in chat
 > - 🎉 ⋙Contenuti nuovi sia Live che Discord
 > - 🦺 ⋙Bot personalizzati e staff amichevole
 > - 👾 ⋙ Server a tema SCP
-**
-</pre>
-            <hr>
-            <h1 class="glitch" data-text="Tutti i miei link!!!">Tutti i miei link!!!</h1>
-            
-            <div class="button-container">
-                <a href="tiktok.html" class="retro-button">[ TIKTOK ]</a>
-                <a href="twitch.html" class="retro-button">[ TWITCH ]</a>
-                <a href="discord.html" class="retro-button">[ DISCORD ]</a>
-                <a href="instagram.html" class="retro-button">[ INSTAGRAM ]</a>
-                <a href="youtube.html" class="retro-button">[ YOUTUBE ]</a>
+                </pre>
+                
+                <h2 class="glitch-text" data-text="Tutti i miei link!!!">Tutti i miei link!!!</h2>
+                <div class="button-grid">
+                    <button class="nav-button" data-target="page-tiktok">TikTok</button>
+                    <button class="nav-button" data-target="page-twitch">Twitch</button>
+                    <button class="nav-button" data-target="page-discord">Discord</button>
+                    <button class="nav-button" data-target="page-instagram">Instagram</button>
+                    <button class="nav-button" data-target="page-youtube">YouTube</button>
+                </div>
+                <pre class="footer">`by Ideologista`</pre>
             </div>
+        </section>
 
-            <pre class="footer">
-`by Ideologista`
-            </pre>
-        </div>
-    </div>
+        <section class="page" id="page-tiktok">
+            <div class="page-content center-content">
+                <h1 class="glitch-text" data-text="[PROFILO TIKTOK]">[PROFILO TIKTOK]</h1>
+                <p>Accesso ai dati del profilo @ideologistascp.</p>
+                <div class="stats-box">
+                    <h2>STATISTICHE (Placeholder)</h2>
+                    <p>Follower: <span id="tiktok-followers">--</span></p>
+                    <p>Like: <span id="tiktok-likes">--</span></p>
+                </div>
+                <a href="https://www.tiktok.com/@ideologistascp?_t=ZN-8yVcPBZoCYg&_r=1" target="_blank" class="nav-button external">Vai al Profilo</a>
+                <button class="nav-button back" data-target="page-home">Indietro</button>
+            </div>
+        </section>
+
+        <section class="page" id="page-twitch">
+            <div class="page-content center-content">
+                <h1 class="glitch-text" data-text="[CANALE TWITCH]">[CANALE TWITCH]</h1>
+                <p>Connessione al canale @ideologista_.</p>
+                <div class="stats-box">
+                    <h2>STATISTICHE (Placeholder)</h2>
+                    <p>Follower: <span id="twitch-followers">--</span></p>
+                    <p>Stato: <span id="twitch-status" style="color: #ff4d4d;">OFFLINE</span></p>
+                </div>
+                <a href="https://www.twitch.tv/ideologista_" target="_blank" class="nav-button external">Vai al Canale</a>
+                <button class="nav-button back" data-target="page-home">Indietro</button>
+            </div>
+        </section>
+
+        <section class="page" id="page-discord">
+            <div class="page-content center-content">
+                <h1 class="glitch-text" data-text="[SERVER DISCORD]">[SERVER DISCORD]</h1>
+                <p>Connessione all'invito [8kmQZDx8wE].</p>
+                <div class="stats-box">
+                    <h2>STATISTICHE IN TEMPO REALE</h2>
+                    <p id="loading-stats">Caricamento dati server...</p>
+                    <p>Membri Online: <span id="discord-online" class="accent-text">--</span></p>
+                    <p>Membri Totali: <span id="discord-total">--</span></p>
+                </div>
+                <a href="https://discord.com/invite/8kmQZDx8wE" target="_blank" class="nav-button external">Entra nel Server</a>
+                <button class="nav-button back" data-target="page-home">Indietro</button>
+            </div>
+        </section>
+
+        <section class="page" id="page-instagram">
+            <div class="page-content center-content">
+                <h1 class="glitch-text" data-text="[PROFILO INSTAGRAM]">[PROFILO INSTAGRAM]</h1>
+                <p>Accesso ai dati del profilo @ideologistascp.</p>
+                <div class="stats-box">
+                    <h2>STATISTICHE (Placeholder)</h2>
+                    <p>Follower: <span id="insta-followers">--</span></p>
+                    <p>Post: <span id="insta-posts">--</span></p>
+                </div>
+                <a href="https://www.instagram.com/ideologistascp" target="_blank" class="nav-button external">Vai al Profilo</a>
+                <button class="nav-button back" data-target="page-home">Indietro</button>
+            </div>
+        </section>
+
+        <section class="page" id="page-youtube">
+            <div class="page-content center-content">
+                <h1 class="glitch-text" data-text="[CANALE YOUTUBE]">[CANALE YOUTUBE]</h1>
+                <p>Accesso al canale @IdeologistaSCP.</p>
+                <div class="stats-box">
+                    <h2>STATISTICHE (Placeholder)</h2>
+                    <p>Iscritti: <span id="yt-subs">--</span></p>
+                    <p>Video: <span id="yt-videos">--</span></p>
+                </div>
+                <a href="https://www.youtube.com/@IdeologistaSCP" target="_blank" class="nav-button external">Vai al Canale</a>
+                <button class="nav-button back" data-target="page-home">Indietro</button>
+            </div>
+        </section>
+
+    </main>
 
     <script src="script.js"></script>
 </body>
