@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>IDEOLOGISTA Links</title>
+    <title>IDEOLOGIC-SOCIALS</title>
     
     <!-- ICONA DEL SITO (FAVICON) -->
     <link rel="icon" type="image/png" href="icona.png">
@@ -30,14 +30,19 @@
         html, body {
             height: 100%;
             overflow-x: hidden;
-            background-color: var(--bg-dark);
+            /* background-color rimosso dal body per evitare che copra l'immagine in 3D */
             font-family: 'Teko', sans-serif;
+        }
+        
+        html {
+             background-color: var(--bg-dark); /* Colore di fallback su html */
         }
 
         body {
             perspective: 1px;
             transform-style: preserve-3d;
             overflow-y: auto;
+            background-color: transparent; /* IMPORTANTE per vedere lo strato Z-1 */
         }
 
         /* --- SFONDO --- */
@@ -46,7 +51,8 @@
             top: 0; left: 0; right: 0; bottom: -20%;
             z-index: -1;
             background-image: 
-                linear-gradient(to bottom, rgba(5, 10, 5, 0.85), rgba(5, 10, 5, 0.95)),
+                /* Gradiente alleggerito (0.6 invece di 0.85) per vedere l'immagine sotto */
+                linear-gradient(to bottom, rgba(5, 10, 5, 0.6), rgba(5, 10, 5, 0.8)),
                 url('sfondo.jpg');
             background-size: cover;
             background-position: center;
